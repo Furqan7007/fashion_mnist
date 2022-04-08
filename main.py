@@ -11,6 +11,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import transforms
 import torch.optim as optim
+
+from model import *
 import warnings
 warnings.filterwarnings("ignore")
 

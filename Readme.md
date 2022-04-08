@@ -7,6 +7,7 @@ Steps to train a ML model:
 5. Figure out which model works best. 
 6. If you want to write a custom model, make sure you have the input and output dimensions sorted. 
 7. If you are using a pretrained model, make sure the model is properly imported. 
+8. Make sure the model and data are uploaded to cuda if cuda is available. 
 
 
 Basic EDA to perform:
