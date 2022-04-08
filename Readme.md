@@ -16,4 +16,18 @@ Basic EDA to perform:
 3. Know how you want to format the dataloader. 
 
 Use of Optimizer: 
-1. 
+1. Defining Criterion and Optimizer
+
+Optimizers define how the weights of the neural network are to be updated, in this tutorial we’ll use SGD Optimizer or Stochastic Gradient Descent Optimizer. Optimizers take model parameters and learning rate as the input arguments. There are various optimizers you can try like Adam, Adagrad, etc.
+
+The criterion is the loss that you want to minimize which in this case is the CrossEntropyLoss() which is the combination of log_softmax() and NLLLoss().
+
+Training steps:
+    Move data to GPU (Optional)
+    Clear the gradients using optimizer.zero_grad()
+    Make a forward pass
+    Calculate the loss
+    Perform a backward pass using loss.backward() to calculate the gradients
+    Take optimizer step using optimizer.step() to update the weights
+
+The validation and Testing steps are also similar but there you just make a forward pass and calculate the loss.

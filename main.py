@@ -11,7 +11,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import transforms
 import torch.optim as optim
-
+import tensorboard
 from model import *
 import warnings
 warnings.filterwarnings("ignore")
@@ -41,6 +41,8 @@ def train(model, data_loader, optimizer, epoch):
         label = sample["label"]
     output = model(data)
     loss = criterion(output, label)
+    loss.backward()
+
 
 
 def val(model, val_loader, epoch):
@@ -61,7 +63,10 @@ def main():
     val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=batch_size, num_workers=2,
                             shuffle=True)
     
-    optimizer = optim.sgd(lr=0.01)
+    model = Network()
+    print(model)
+    optimizer = optim.SGD(model.parameters(), lr = 0.01)
+    
     
     max_acc = 0
     for epoch in range(epochs):
