@@ -31,3 +31,9 @@ The criterion is the loss that you want to minimize which in this case is the Cr
     Take optimizer step using optimizer.step() to update the weights
 
 The validation and Testing steps are also similar but there you just make a forward pass and calculate the loss.
+
+**Select ML algorithms based on requirement**:
+    See the following link for details : 
+    https://www.theinsaneapp.com/2021/11/machine-learning-algorithms-for-beginners.html
+   
+
